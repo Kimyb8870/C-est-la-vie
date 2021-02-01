@@ -1,0 +1,37 @@
+.loginpage {
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+.loginpage__wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.loginpage__title {
+  color: #fff;
+  font-weight: 300;
+  font-size: 30px;
+  font-style: italic;
+}
+
+.loginpage__button {
+  width: 150px;
+  height: 40px;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  transition: all 250ms;
+}
+.loginpage__button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 200px;
+}
+
+.loginpage__button:active {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 200px;
+}

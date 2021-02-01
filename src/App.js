@@ -4,13 +4,12 @@ import AppRouter from "./AppRouter";
 import { authService } from "./firebase";
 
 function App() {
-  const [user, setUser] = useState({ id: "kimyb" });
-
-  // const [user, setUser] = useState(null);
+  const [user, setUser] = useState(null);
   const loadCurrentUser = async () => {
     try {
       await authService.onAuthStateChanged((user) => {
         setUser(user);
+        console.log(user);
       });
     } catch (error) {
       console.log(error);

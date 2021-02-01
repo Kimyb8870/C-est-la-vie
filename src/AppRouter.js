@@ -16,8 +16,6 @@ const AppRouter = ({ user }) => {
   let history = useHistory();
   history.replace("/login");
 
-  useEffect(() => {}, []);
-
   return (
     <Switch>
       {user ? (
@@ -27,7 +25,7 @@ const AppRouter = ({ user }) => {
           </Route>
           <Route exact path="/profile" component={ProfilePage} />
           <Route exact path="/submit" component={InputFormPage} />
-          <Route exact path="/home" component={MainPage} />
+          <Route exact path="/home" component={MainPage} user={user} />
         </>
       ) : (
         <Route exact path="/login" component={LoginPage} />

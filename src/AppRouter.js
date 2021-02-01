@@ -1,21 +1,38 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useHistory,
+} from "react-router-dom";
 
 import InputFormPage from "./pages/InputFormPage/InputFormPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import MainPage from "./pages/MainPage/MainPage";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
 
-const AppRouter = () => {
+const AppRouter = ({ user }) => {
+  let history = useHistory();
+  history.replace("/login");
+
+  useEffect(() => {}, []);
+
   return (
-    <Router>
-      <Switch>
+    <Switch>
+      {user ? (
+        <>
+          <Route exact path="/login">
+            <LoginPage user={user} />
+          </Route>
+          <Route exact path="/profile" component={ProfilePage} />
+          <Route exact path="/submit" component={InputFormPage} />
+          <Route exact path="/home" component={MainPage} />
+        </>
+      ) : (
         <Route exact path="/login" component={LoginPage} />
-        <Route exact path="/home" component={MainPage} />
-        <Route exact path="/profile" component={ProfilePage} />
-        <Route exact path="/submit" component={InputFormPage} />
-      </Switch>
-    </Router>
+      )}
+    </Switch>
   );
 };
 

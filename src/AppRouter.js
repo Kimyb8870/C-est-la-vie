@@ -25,7 +25,9 @@ const AppRouter = ({ user }) => {
           </Route>
           <Route exact path="/profile" component={ProfilePage} />
           <Route exact path="/submit" component={InputFormPage} />
-          <Route exact path="/home" component={MainPage} user={user} />
+          <Route exact path="/home">
+            <MainPage user={user} />
+          </Route>
         </>
       ) : (
         <Route exact path="/login" component={LoginPage} />

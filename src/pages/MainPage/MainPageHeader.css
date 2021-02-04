@@ -1,0 +1,14 @@
+.mainpage__header {
+  color: white;
+}
+
+.mainpage__header__navGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.MuiSvgIcon-root {
+  color: white;
+}

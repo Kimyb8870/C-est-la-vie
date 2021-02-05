@@ -1,12 +1,13 @@
 import React from "react";
 import MainPageHeader from "./MainPageHeader";
 import "./MainPage.css";
+import MainPageBody from "./MainPageBody";
 
 const MainPage = ({ user }) => {
   return (
     <div className="mainpage">
       <MainPageHeader />
-      <section className="mainpage__body">mainpage body</section>
+      <MainPageBody />
       <footer className="mainpage__footer">
         {/* mainpage header */}
         mainpage footer

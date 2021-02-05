@@ -1,0 +1,26 @@
+.mainpage__body {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.mainpage__body__banner {
+  width: 90vw;
+  height: 25vh;
+  border: 1px solid white;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-image: url("../../assets/images/this_is_promise.gif");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 30px;
+}
+
+.mainpage__body__travelPic {
+  width: 250px;
+}

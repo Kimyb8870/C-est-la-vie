@@ -11,7 +11,7 @@ const MainPageHeader = () => {
         <IconButton>
           <MenuIcon />
         </IconButton>
-        {/* 로고는 나중에 */}
+        <h1 className="mainpage__header__logo">this is life</h1>
         <IconButton>
           <PersonIcon />
         </IconButton>
